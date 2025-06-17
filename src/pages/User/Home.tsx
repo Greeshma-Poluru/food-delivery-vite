@@ -41,9 +41,11 @@ const Home = () => {
             {item.image && (
               <img src={item.image} alt={item.name} style={{ width: '100%', height: '150px', objectFit: 'cover' }} />
             )}
-            <h3>{item.name}</h3>
-            <p>₹{item.price}</p>
-            <button onClick={() => addToCart(item)}>Add to Cart</button>
+             <div className="card-content">
+              <h3>{item.name}</h3>
+              <p>₹{item.price}</p>
+              <button onClick={() => addToCart(item)}>Add to Cart</button>
+            </div>
           </div>
         ))}
 

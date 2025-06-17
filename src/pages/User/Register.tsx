@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './UserAuth.css'; // ✅ Import CSS
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -16,27 +17,30 @@ const Register = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{backgroundColor: "#fff0f5",minHeight:"100vh"}}>
+    <a href="/"><img src="/logo.png" alt="Logo" className="logo" /></a>
+    <div className="user-auth-container">
       <h2>User Register</h2>
       <input
         type="text"
         placeholder="Full Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
-      /><br/><br/>
+      />
       <input
         type="email"
         placeholder="User Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-      /><br/><br/>
+      />
       <input
         type="password"
         placeholder="User Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-      /><br/><br/>
+      />
       <button onClick={handleRegister}>Register</button>
+    </div>
     </div>
   );
 };

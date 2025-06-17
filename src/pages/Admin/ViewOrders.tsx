@@ -42,7 +42,7 @@ const ViewOrders = () => {
           orders.map((order, idx) => (
             <div key={idx} style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
               <p><strong>User:</strong> {order.username}</p>
-              <p><strong>Status:</strong> {order.status}</p>
+              <p><strong>Status:</strong> {order.status} {setIcon(order.status)}</p>
               <ul>
                 {order.items.map((item, index) => (
                   <li key={index}>{item.name} × {item.quantity}</li>
@@ -67,5 +67,15 @@ const ViewOrders = () => {
     </div>
   );
 };
+
+function setIcon(status:string){
+  if(status=="Approved"){
+    return "ram"
+  }else if(status=="Pending"){
+    return "varun"
+  }else{
+    return "❌"
+  }
+}
 
 export default ViewOrders;

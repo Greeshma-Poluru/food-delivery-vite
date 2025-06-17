@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './AdminLogin.css'; // ✅ Import the CSS file
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -16,20 +17,20 @@ const AdminLogin = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div className="admin-login-container">
       <h2>Admin Login</h2>
       <input
         type="email"
         placeholder="Admin Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-      /><br/><br/>
+      />
       <input
         type="password"
         placeholder="Admin Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-      /><br/><br/>
+      />
       <button onClick={handleLogin}>Login</button>
     </div>
   );
