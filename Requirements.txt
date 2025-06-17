@@ -1,0 +1,11 @@
+If you want to clone
+1. git clone 
+2. npm install
+3. npm i react-router-dom
+
+If you want to create from scratch (You have to download the zip file, then you can copy src, public folder and all the files in your folder)
+1. Create a folder
+2. npm create vite@latest
+3. cd folder_name
+4. npm install
+5. npm i react-router-dom
