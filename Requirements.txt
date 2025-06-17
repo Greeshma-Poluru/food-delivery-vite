@@ -1,5 +1,5 @@
 If you want to clone
-1. git clone 
+1. git clone https://github.com/shubhranshu-bhardwaj/Varun-s-foodOrder.git
 2. npm install
 3. npm i react-router-dom
 
